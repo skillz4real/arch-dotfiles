@@ -108,9 +108,9 @@ workspace 10 output $sm
     bindsym $win+Up focus up
     bindsym $win+Right focus right
 
-    bindsym $alt+Left focus left
-    bindsym $alt+Down focus down
-    bindsym $alt+Up focus up
+   # bindsym $alt+Left focus left
+   # bindsym $alt+Down focus down
+   # bindsym $alt+Up focus up
     bindsym $alt+Right focus right
 
 
