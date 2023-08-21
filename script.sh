@@ -6,6 +6,7 @@ sudo rsync -av --relative /home/z/.config/i3/* .
 sudo rsync -av --relative /home/z/.config/cava/config .
 sudo rsync -av --relative /home/z/.config/alacritty/alacritty.yaml .
 sudo rsync -av --relative /home/z/.config/kitty/* .
-rsync -av --relative /etc/X11/xinit/xinitrc .
+sudo rsync -av --relative /etc/X11/xinit/xinitrc .
+sudo rsync -av --relative /home/z/.bashrc .
 
 echo "arch dotfile updated on " $(date) >> log.txt
