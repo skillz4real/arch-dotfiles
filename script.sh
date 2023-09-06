@@ -8,5 +8,7 @@ sudo rsync -av --relative /home/z/.config/alacritty/alacritty.yaml .
 sudo rsync -av --relative /home/z/.config/kitty/* .
 sudo rsync -av --relative /etc/X11/xinit/xinitrc .
 sudo rsync -av --relative /home/z/.bashrc .
+sudo rsync -av --relative /home/z/.config/picom/picom.conf .
 
 echo "arch dotfile updated on " $(date) >> log.txt
+
