@@ -1,21 +1,21 @@
 font:
   normal:
-      family: Cozette
+      family: "FiraCodeNerdFont"
       style: Regular
 
   bold:
-      family: Cozette
+      family: "FiraCodeNerdFont"
       style: Bold
 
   italic:
-      family: Cozette
+      family: "FiraCodeNerdFont"
       style: Italic
 
   bold_italic:
-      family: Cozette
+      family: "FiraCodeNerdFont"
       style: Bold Italic
 
-  size: 11
+  size: 8
 
 colors: 
   # Default colors
@@ -36,7 +36,7 @@ colors:
 
   # Bright colors
   bright:
-      black:   '0x141423'
+      black:   '0x2e88b2'
       red:     '0xe06c75'
       green:   '0x98c379'
       yellow:  '0xd19a66'
@@ -44,3 +44,8 @@ colors:
       magenta: '0x744453'
       cyan:    '0x2e88b2'
       white:   '0xcfd0e6'
+
+shell:
+  program: 'zellij'
+  args:
+    - "--"
