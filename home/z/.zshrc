@@ -1,4 +1,4 @@
-### FANCY ANIMATED PROMPT
+### FANCY PROMPT
 eval "$(starship init zsh)"
 
 
@@ -93,7 +93,8 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # from bashrc
- alias trinity="ssh z@$TRINITY"
- alias ftp="lftp -u ftpuser,t^169B4z $TRINITY"
- alias JBL="bluetoothctl connect F8:5C:7D:34:1A:89"
- alias vim=nvim
+alias trinity="ssh z@$TRINITY"
+alias ftp="lftp -u ftpuser,t^169B4Z $TRINITY"
+alias JBL="bluetoothctl connect F8:5C:7D:34:1A:89"
+alias vim=nvim
+alias monerod="monerod --config-file /home/z/xdd/xmr/monerod.conf --detach"
