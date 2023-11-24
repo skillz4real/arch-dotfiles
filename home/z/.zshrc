@@ -97,4 +97,5 @@ alias trinity="ssh z@$TRINITY"
 alias ftp="lftp -u ftpuser,t^169B4Z $TRINITY"
 alias JBL="bluetoothctl connect F8:5C:7D:34:1A:89"
 alias vim=nvim
-alias monerod="monerod --config-file /home/z/xdd/xmr/monerod.conf --detach"
+alias monero="monerod --config-file /home/z/xdd/xmr/monerod.conf --detach"
+alias xterm="mullvad-exclude xterm"
