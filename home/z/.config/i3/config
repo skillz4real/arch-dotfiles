@@ -124,7 +124,7 @@ bindsym $win+Shift+Right move right
 bindsym $win+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $win+s layout stacking toggle
+# bindsym $win+s layout stacking toggle
 
 #bindsym $win+t layout tabbed
 #bindsym $win+space layout toggle split
