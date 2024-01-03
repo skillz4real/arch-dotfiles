@@ -9,7 +9,7 @@ PERL_LOCAL_LIB_ROOT="/home/z/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}
 PERL_MB_OPT="--install_base \"/home/z/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=/home/z/perl5"; export PERL_MM_OPT;
 
-neofetch
+fastfetch -l .config/fastfetch/ascii_grim
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 

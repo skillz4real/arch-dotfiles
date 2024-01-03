@@ -96,7 +96,7 @@ floating_modifier $win
 
 # start a terminal
 bindsym $win+Return exec xterm
-bindsym $win+Shift+Return exec alacritty --config-file /home/z/.config/alacritty/alacritty.yaml
+bindsym $win+Shift+Return exec alacritty --config-file /home/z/.config/alacritty/alacritty.toml
 
 # kill focused window
 bindsym $win+Shift+c kill
