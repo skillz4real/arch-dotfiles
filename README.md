@@ -3,7 +3,7 @@
 ## This is why my computer looks the way it looks
 
 <p align="center">
-  <img src="mascot.gif" alt="Mascot" height="750px">
+  <img src="mascot.gif" alt="Mascot" height="500px">
 </p>
 
  ![Arch](https://img.shields.io/badge/Arch%20Linux-1793D1?logo=arch-linux&logoColor=fff&style=for-the-badge) 
