@@ -20,7 +20,7 @@
 
 ## 📜 Description
 
-Riced my computer to make those long coding enjoyable and more productive
+Ricing my laptop to make those long coding session even more enjoyable and productive
 
 ---
 
