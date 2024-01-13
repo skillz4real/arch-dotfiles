@@ -3,7 +3,7 @@
 ## This is why my computer looks the way it looks
 
 <p align="center">
-  <img src="mascot.gif" alt="Mascot" height="500px">
+  <img src="mascot.gif" alt="Mascot" height="250px">
 </p>
 
  ![Arch](https://img.shields.io/badge/Arch%20Linux-1793D1?logo=arch-linux&logoColor=fff&style=for-the-badge) 
@@ -14,13 +14,13 @@
  ![Neovim](https://img.shields.io/badge/NeoVim-%2357A143.svg?&style=for-the-badge&logo=neovim&logoColor=white) 
  [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0) 
 
-💻 *Open Source gives us back the power*
+💻 *Open Source is software that empowers the user*
 
 ---
 
 ## 📜 Description
 
-Ricing my laptop to make those long coding session even more enjoyable and productive
+Ricing my laptop to make those long coding sessions even more enjoyable and productive
 
 ---
 
