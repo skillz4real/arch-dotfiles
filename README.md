@@ -37,9 +37,9 @@ cd arch-dotfiles
 ## 🌟 Features
 
 - Crazy smooth animations with picom
-- 2 polybar theme with assorted wallpapers
+- 2 polybar themes with assorted wallpapers
 - Windows are transparent when not focused
-- Shell Script to keep track of your own dotfiles
+- Shell Script to keep track of your dotfiles
 
 ---
 
@@ -51,7 +51,7 @@ Coming up
 
 ## 📚 Educational Resources
 
-I am not an expert, I am still learning and here are the resources I use and my profiles:
+I am not an expert, I am still learning, here are the resources I use and my profiles:
 
 <!--- [Hack The Box](https://app.hackthebox.com/profile/1776662)-->
 <!--- [Try Hack Me](https://tryhackme.com/p/skillz4real)-->
