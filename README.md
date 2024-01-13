@@ -32,6 +32,7 @@ You can try applying this to your system by cloning this repo:
 git clone https://github.com/skillz4real/arch-dotfiles
 cd arch-dotfiles
 ```
+Installation script coming up
 ---
 
 ## 🌟 Features
@@ -40,12 +41,6 @@ cd arch-dotfiles
 - 2 polybar themes with assorted wallpapers
 - Windows are transparent when not focused
 - Shell Script to keep track of your dotfiles
-
----
-
-## 📘 Installation
-
-Coming up
 
 ---
 
