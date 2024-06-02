@@ -49,10 +49,10 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
 fi
 
 nitrogen --restore &
-picom --config ~/.config/picom/picom.conf &
+picom --config $HOME/.config/picom/picom.conf &
 xrandr --output HDMI-1-0 --auto --left-of eDP-1 --rotate left &
-dunst --config "~/.config/dunst/dunstrc" &
-/bin/sh ~/.config/i3/scripts/polybarstart.sh &
-/bin/python3 "/home/z/.config/xborders/xborders" -c ~/.config/xborders/config.json &
-exec i3 -c ~/.config/i3/config && xset s off
+pkill dunst; dunst --config $HOME/.config/dunst/dunstrc &
+cd $HOME/.config/i3/scripts/ && ./polybarstart.sh &
+/usr/bin/python3 $HOME/.config/xborders/xborders -c ~/.config/xborders/config.json &
+exec i3 -c $HOME/.config/i3/config && xset s off
 
