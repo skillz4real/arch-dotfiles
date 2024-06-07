@@ -22,7 +22,7 @@ if [[ "$distro" == "arch" ]]; then
   cp -a ./home/z/.zshrc $HOME
   ln -sf ./Wallpapers $HOME/Wallpapers
    
-elif [[ "$distro" == "kali" ]]; 
+elif [[ "$distro" == "kali" ]]; then 
   install_cmd1="apt install -y"
   dependencies="zsh zsh-autosuggestions zsh-syntax-highlighting kitty neofetch dunst neovim"
   echo "Installing dependencies from debian repo"
