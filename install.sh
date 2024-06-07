@@ -31,4 +31,6 @@ elif [[ "$distro" == "kali" ]];
   sleep 5
   cp -a ./home/z/* $HOME
   ln -sf ./Wallpapers $HOME/Wallpapers
+else
+  echo "Distro not supported yet"
 fi
