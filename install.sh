@@ -27,19 +27,18 @@ elif [[ "$distro" == "kali" ]]; then
   dependencies="zsh zsh-autosuggestions zsh-syntax-highlighting kitty neofetch dunst neovim thefuck"
   echo "manually run sudo apt install -y $dependencies"
   sleep 5
-  echo "patch .zshrc file change line 4 "
   #`$install_cmd1 $dependencies`
   echo "copying config files"
   sleep 5
   cp -a ./home/z/.config $HOME
   ln -sf ./Wallpapers $HOME/Wallpapers
-  echo "applying patche for debian"
+  echo "applying patches for kali"
   awk '{ if (NR == 4) { 
     print "neofetch" 
   } else if (NR == 5){
-    print "/usr/share/zsh-syntaxe-highlighting/zsh-syntax-highlighting.zsh" 
+    print "source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" 
   } else if (NR == 6){
-    print "/usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh" 
+    print "source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh" 
   } else {
     print 
   }
