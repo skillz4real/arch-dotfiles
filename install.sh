@@ -29,7 +29,8 @@ elif [[ "$distro" == "kali" ]]; then
   #`$install_cmd1 $dependencies`
   echo "copying config files"
   sleep 5
-  cp -a ./home/z/* $HOME
+  cp -a ./home/z/.config $HOME
+  cp -a ./home/z/.zshrc $HOME
   ln -sf ./Wallpapers $HOME/Wallpapers
 else
   echo "Distro not supported yet"
