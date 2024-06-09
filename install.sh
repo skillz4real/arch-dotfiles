@@ -24,14 +24,34 @@ if [[ "$distro" == "arch" ]]; then
    
 elif [[ "$distro" == "kali" ]]; then 
   install_cmd1="apt install -y" 
-  dependencies="zsh zsh-autosuggestions zsh-syntax-highlighting kitty neofetch dunst neovim"
-  echo "Please install the following dependencies $dependencies"
+  dependencies="zsh zsh-autosuggestions zsh-syntax-highlighting kitty neofetch dunst neovim thefuck"
+  echo "manually run sudo apt install -y $dependencies"
+  sleep 5
+  echo "patch .zshrc file change line 4 "
   #`$install_cmd1 $dependencies`
   echo "copying config files"
   sleep 5
   cp -a ./home/z/.config $HOME
   cp -a ./home/z/.zshrc $HOME
   ln -sf ./Wallpapers $HOME/Wallpapers
-else
+  echo "applying patche for debian"
+  awk '{ if (NR == 4) { 
+    print "neofetch" 
+  } else if (NR == 5){
+    print "/usr/share/zsh-syntaxe-highlighting/zsh-syntax-highlighting.zsh" 
+  } else if (NR == 6){
+    print "/usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh" 
+  } else {
+    print 
+  }
+  }' $HOME/.zshrc > $HOME/.zshrc
+
+  sleep 5
+
+  echo "downloading starship"
+
+  curl -sS https://starship.rs/install.sh | sh
+
+  else
   echo "Distro not supported yet"
 fi
