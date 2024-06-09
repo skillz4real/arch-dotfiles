@@ -25,8 +25,8 @@ if [[ "$distro" == "arch" ]]; then
 elif [[ "$distro" == "kali" ]]; then 
   install_cmd1="apt install -y" 
   dependencies="zsh zsh-autosuggestions zsh-syntax-highlighting kitty neofetch dunst neovim"
-  echo "Installing dependencies from debian repo"
-  `$install_cmd1 $dependencies`
+  echo "Please install the following dependencies $dependencies"
+  #`$install_cmd1 $dependencies`
   echo "copying config files"
   sleep 5
   cp -a ./home/z/* $HOME
