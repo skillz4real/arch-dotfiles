@@ -1,6 +1,6 @@
 #! /usr/bin/bash
 
-set -x 
+#set -x 
 
 distro=$(cat /etc/os-release | grep -ie "^id=" | cut -d '=' -f 2 )
 if [[ "$distro" == "arch" ]]; then
@@ -23,7 +23,7 @@ if [[ "$distro" == "arch" ]]; then
   ln -sf ./Wallpapers $HOME/Wallpapers
    
 elif [[ "$distro" == "kali" ]]; then 
-  install_cmd1="apt install -y"
+  install_cmd1="apt install -y" 
   dependencies="zsh zsh-autosuggestions zsh-syntax-highlighting kitty neofetch dunst neovim"
   echo "Installing dependencies from debian repo"
   `$install_cmd1 $dependencies`
