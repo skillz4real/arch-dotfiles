@@ -32,7 +32,6 @@ elif [[ "$distro" == "kali" ]]; then
   echo "copying config files"
   sleep 5
   cp -a ./home/z/.config $HOME
-  cp -a ./home/z/.zshrc $HOME
   ln -sf ./Wallpapers $HOME/Wallpapers
   echo "applying patche for debian"
   awk '{ if (NR == 4) { 
@@ -44,7 +43,7 @@ elif [[ "$distro" == "kali" ]]; then
   } else {
     print 
   }
-  }' $HOME/.zshrc > $HOME/.zshrc
+  }' home/z/.zshrc > $HOME/.zshrc
 
   sleep 5
 
