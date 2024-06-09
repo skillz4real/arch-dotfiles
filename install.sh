@@ -50,6 +50,8 @@ elif [[ "$distro" == "kali" ]]; then
 
   curl -sS https://starship.rs/install.sh | sh
 
+  zsh
+
   else
   echo "Distro not supported yet"
 fi

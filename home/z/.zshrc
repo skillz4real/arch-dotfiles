@@ -13,7 +13,9 @@ bindkey '^[[H' beginning-of-line                  # home
 bindkey '^[[F' end-of-line                        # end
 bindkey '^[[1;5C' forward-word                    # ctrl + ->
 bindkey '^[[1;5D' backward-word                   # ctrl + <-
-
+bindkey '^[[3~' delete-char                       # delete
+bindkey '^[[5~' beginning-of-buffer-or-history       # page up
+bindkey '^[[6~' end-of-buffer-or-history            # page up
 ## autocomplete scripts before loading compinit
 fpath=($fpath ~/.config/zsh/.zsh.d)
 
@@ -97,5 +99,8 @@ alias kbd="brightnessctl -d asus::kbd_backlight s "
 
 eval $(thefuck --alias)
 
-export PATH=/opt/cuda/bin:$PATH
+export PATH=/opt/cuda/bin:$HOME/usr/bin:$PATH
 export LD_LIBRARY_PATH=/opt/cuda/lib64:$LD_LIBRARY_PATH
+
+alias nu="sudo -u neo4j"
+alias pu="sudo -u postgres"
