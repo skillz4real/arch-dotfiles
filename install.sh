@@ -24,7 +24,7 @@ if [[ "$distro" == "arch" ]]; then
    
 elif [[ "$distro" == "kali" ]]; then 
   install_cmd1="apt install -y" 
-  dependencies="zsh zsh-autosuggestions zsh-syntax-highlighting kitty neofetch dunst neovim thefuck"
+  dependencies="zsh zsh-autosuggestions zsh-syntax-highlighting kitty neofetch dunst neovim thefuck npm"
   echo "manually run sudo apt install -y $dependencies"
   sleep 5
   #`$install_cmd1 $dependencies`
