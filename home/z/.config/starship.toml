@@ -127,6 +127,9 @@ symbol = "ml "
 [opa]
 symbol = "opa "
 
+[os]
+disabled = false
+
 [os.symbols]
 AIX = "aix "
 Alpaquita = "alq "
@@ -134,7 +137,7 @@ AlmaLinux = "alma "
 Alpine = "alp "
 Amazon = "amz "
 Android = "andr "
-Arch = "rch "
+Arch = "arch "
 Artix = "atx "
 CentOS = "cent "
 Debian = "deb "
