@@ -239,3 +239,10 @@ symbol = "terraform "
 [zig]
 symbol = "zig "
 
+[username]
+disabled = false
+show_always = true
+format = '[$user](yellow bold)@$hostname'
+[hostname]
+ssh_only = false
+
