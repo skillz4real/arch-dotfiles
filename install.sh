@@ -18,6 +18,8 @@ check_distro_and_set_env_var(){
 		export install_cmd2="git clone"
 		export dependencies="zsh zsh-autosuggestions zsh-syntax-highlighting kitty neofetch dunst neovim thefuck npm"
 		export extra_dependencies=""
+    sudo add-apt-repository ppa:neovim-ppa/unstable
+    sudo apt update
 	else
 		echo "Distro not supported yet"
 	fi
