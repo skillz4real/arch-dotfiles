@@ -1,6 +1,7 @@
 #! /usr/bin/bash
 
-set -x 
+# uncomment for debugging
+#set -x 
 
 check_distro_and_set_env_var(){ 
 	echo "Checking current distro"
@@ -58,5 +59,6 @@ echo "This installation may require your attention and input"
 check_distro_and_set_env_var
 installing_dependencies
 configuring
-zsh
 echo "Installation done. You might need to update and upgrade your package to match the configuration files"
+sleep 5
+zsh
