@@ -58,8 +58,17 @@ smart_borders on
 font pango:FiraCodeNerdFont 8
 
 #===========================================#
+#                CLASSES                    #
+#===========================================#
+
+#some classes
+for_window [class="floating"] floating enabled
+for_window [class="nvim-notepad"] floating enable
+
+#===========================================#
 #                KEYBINDINGS                #
 #===========================================#
+
 # launcher
 bindsym $win+d exec --no-startup-id dmenu_run -nf \#6d84a2 -nb \#17292f -b -p "[root@world ~]#"
 bindsym $win+Shift+d exec --no-startup-id sudo dmenu_run -nf \#ab4b52 -nb \#92000a -sb \#ff0000 -sf \#000000 -b -p "[root@world ~]#"
@@ -68,15 +77,6 @@ bindsym $win+Shift+d exec --no-startup-id sudo dmenu_run -nf \#ab4b52 -nb \#9200
 bindsym Print exec --no-startup-id maim "/home/$USER/Screenshots/$(date).png"
 bindsym Shift+Print exec --no-startup-id maim --select "/home/$USER/Screenshots/$(date).png"
 bindsym $win+Print exec --no-startup-id maim --select "/home/$USER/Screenshots/tmp.png" && feh "/home/$USER/Screenshots/tmp.png" --class floating
-
-#some classes
-for_window [class="floating"] floating enabled
-for_window [class="top-left"] floating enable, move position 0 px 0 px, resize set 960 px 540 px
-for_window [class="bottom-left"] floating enable, move position 0 px 540 px, resize set 960 px 540 px
-for_window [class="top-right"] floating enable, move position 960 px 0 px, resize set 960 px 540 px
-for_window [class="bottom-right"] floating enable, move position 960 px 540 px, resize set 960 px 540 px
-for_window [class="docked-right"] floating enable, move position 960 px 0 px, resize set 960 px 1080 px
-for_window [class="nvim-notepad"] floating enable
 
 # brightnessctl
 bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl s 10%- 
@@ -92,29 +92,31 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 bindsym XF86AudioNext exec --no-startup-id mocp -f
 bindsym XF86AudioPrev exec --no-startup-id mocp -r
 bindsym XF86AudioPlay exec --no-startup-id mocp -G
+bindsym $win+Shift+m exec --no-startup-id kitty mocp
+
+# spawns nvim
+bindsym $win+Shift+n exec --no-startup-id kitty nvim --class floating
 
 # asusctl utilities
-bindsym XF86KbdBrightnessDown exec --no-startup-id asusctl -p
-bindsym XF86KbdBrightnessUp exec --no-startup-id asusctl -n
+bindsym XF86KbdBrightnessDown exec --no-startup-id $(brightnessctl -d asus::kbd_backlight s $(( $(brightnessctl -d asus::kbd_backlight | grep Current | cut -d ':' -f 2 | cut -d ' ' -f 2) - 1 )) 2>/dev/null) 
+bindsym XF86KbdBrightnessUp exec --no-startup-id $(brightnessctl -d asus::kbd_backlight s $(( $(brightnessctl -d asus::kbd_backlight | grep Current | cut -d ':' -f 2 | cut -d ' ' -f 2) + 1 )) &> dev/null)
 bindsym XF86Launch4 exec --no-startup-id asusctl profile -n && notify-send "Asus Profile" "Set to $(asusctl profile -p)"
 
 #lock
 bindsym $win+Shift+L exec /bin/sh /home/z/.config/i3/scripts/lockscreen.sh
-# Use Mouse+$win to drag floating windows to their wanted position
 
-bindsym $win+Shift+bracketleft exec --no-startup-id kitty --class top-left
-bindsym $win+Shift+bracketright exec --no-startup-id kitty --class top-right
-bindsym $win+Shift+apostrophe exec --no-startup-id kitty --class bottom-right
-bindsym $win+Shift+semicolon exec --no-startup-id kitty --class bottom-left
-bindsym $win+Shift+bar exec --no-startup-id kitty --class docked-right
-
+#Special position for windows
 bindsym $win+bracketleft floating enable, move position 0 px 0 px, resize set 960 px 540 px
+bindsym $win+Shift+bracketleft floating enable, move position 0 px 0 px
 bindsym $win+bracketright floating enable, move position 960 px 0 px, resize set 960 px 540 px
+bindsym $win+Shift+bracketright  floating enable, move position 960 px 0 px
 bindsym $win+semicolon floating enable, move position 0 px 540 px, resize set 960 px 540 px
+bindsym $win+Shift+semicolon floating enable, move position 0 px 540 px
 bindsym $win+apostrophe floating enable, move position 960 px 540 px, resize set 960 px 540 px
+bindsym $win+Shift+apostrophe floating enable, move position 960 px 540 px
 bindsym $win+bar floating enable, move position 960 px 0 px, resize set 960 px 1080 px
 
-
+# Use Mouse+$win to drag floating windows to their wanted position
 floating_modifier $win
 
 # start a terminal
@@ -122,7 +124,7 @@ bindsym $win+Return exec mullvad-exclude kitty
 bindsym $win+Shift+Return exec kitty
 
 #start browser
-bindsym $win+b exec mullvad-exclude falkon
+bindsym $win+b exec mullvad-exclude chromium
 bindsym $win+Shift+b exec firefox
 
 # kill focused window
