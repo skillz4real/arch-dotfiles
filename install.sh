@@ -8,15 +8,15 @@ check_distro_and_set_env_var(){
 	export distro=$(cat /etc/os-release | grep -ie "^id_like=" | cut -d '=' -f 2 )
 	if [[ "$distro" == "arch" ]]; then
 		echo "You are running an arch based system"
-		export install_cmd1="sudo pacman -S --no-confirm"
-		export install_cmd2="paru -S --no-confirm"
+		export install_cmd1="sudo pacman -Syu --no-confirm"
+		export install_cmd2="paru -Syu --no-confirm"
 		export dependencies="xorg-xinit xorg zsh zsh-autosuggestion zsh-syntax-highlighting kitty betterlockscreen i3 dunst fastfetch polybar picom zellij neovim nitrogen feh xborders"
 		export extra_dependencies=" "
 	elif [[ "$distro" == "debian" ]]; then 
 		echo "You are running a debian based system"
-		export install_cmd1="sudo apt install -y" 
+		export install_cmd1="sudo apt update && sudo apt upgrade && sudo apt install -y" 
 		export install_cmd2="git clone"
-		export dependencies="zsh zsh-autosuggestions zsh-syntax-highlighting kitty neofetch dunst neovim thefuck npm"
+		export dependencies="zsh zsh-autosuggestions zsh-syntax-highlighting kitty neofetch dunst neovim npm"
 		export extra_dependencies=""
     sudo add-apt-repository ppa:neovim-ppa/unstable
     sudo apt update
