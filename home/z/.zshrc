@@ -84,9 +84,9 @@ fi
 # from bashrc
 alias trinity="ssh z@$TRINITY"
 alias ftp="sftp ftpuser@$TRINITY"
-alias JBL="bluetoothctl connect F8:5C:7D:34:1A:89"
+alias JBL="bluetoothctl connect $JBL"
 alias vim="nvim"
-alias monero="monerod --config-file /home/z/xdd1/xmr/monerod.conf --detach"
+alias monero="monerod --config-file $HOME/xdd1/xmr/monerod.conf --detach"
 alias xterm="mullvad-exclude xterm"
 alias localb="mullvad-exclude falkon"
 alias feh="feh -."
@@ -97,10 +97,6 @@ alias refresh="source /etc/X11/xinit/xinitrc"
 alias kbd="brightnessctl -d asus::kbd_backlight s "
 #alias startx= "startx -- -keeptty >> ~/.local/share/xorg/betterXorg.log"
 
-eval $(thefuck --alias)
-
 export PATH=/opt/cuda/bin:$HOME/usr/bin:$PATH
 export LD_LIBRARY_PATH=/opt/cuda/lib64:$LD_LIBRARY_PATH
-
-alias nu="sudo -u neo4j"
-alias pu="sudo -u postgres"
+export SHELL=/bin/zsh
