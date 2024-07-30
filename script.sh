@@ -13,6 +13,7 @@ sudo rsync -av --relative $HOME/.config/nvim/init.lua .
 sudo rsync -av --relative $HOME/.config/nvim/lua .
 sudo rsync -av --relative $HOME/.config/starship*.toml .
 sudo rsync -av --relative $HOME/.config/xborders .
+sudo rsync -av --relative $HOME/.config/hypr/ .
 
 
 echo "arch dotfile updated on " $(date) >> log.txt
