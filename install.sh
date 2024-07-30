@@ -8,7 +8,7 @@ check_distro_and_set_env_var(){
 	export distro=$(cat /etc/os-release | grep -ie "^id=" | cut -d '=' -f 2 )
 	if [[ "$distro" == "arch" ]]; then
 		echo "You are running an arch based system"
-		export install_cmd1="sudo pacman -Syu --no-confirm"
+		export install_cmd1="sudo pacman -Syu --noconfirm"
 		export install_cmd2="paru -Syu --no-confirm"
 		export dependencies="tmux curl xorg-xinit xorg zsh zsh-autosuggestion zsh-syntax-highlighting kitty betterlockscreen i3 dunst fastfetch polybar picom zellij neovim nitrogen feh xborders"
 		export extra_dependencies=" "
